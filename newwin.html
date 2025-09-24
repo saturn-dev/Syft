@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" id="favi" href="/public/resources/terbium.png" type="image/x-icon">
+    <title>New Tab</title>
+    <link rel="stylesheet" id="relsn" href="css/newin.css">
+    <link rel="stylesheet" href="/public/styles/cursors.css">
+</head>
+            <div class="god-rays"></div>
+
+<body>
+    <style>
+        .god-rays {
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -520px;
+  height: 550px;
+  --stripes: repeating-linear-gradient(
+    100deg,
+    var(--ray-dark1) 0%,
+    var(--ray-dark1) 7%,
+    var(--ray-transparent) 10%,
+    var(--ray-transparent) 12%,
+    var(--ray-dark1) 16%
+  );
+
+  --rays: repeating-linear-gradient(
+    100deg,
+    var(--ray-light1) 10%,
+    var(--ray-light2) 15%,
+    var(--ray-light1) 20%,
+    var(--ray-dark2) 25%,
+    var(--ray-light1) 30%
+  );
+
+  background-image: var(--stripes), var(--rays);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+  animation: fadeIn 2s ease;
+  mask-image: radial-gradient(ellipse at 100% 0%, rgba(255, 255, 255, 0) 40%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 100% 0%, white 40%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.god-rays::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--stripes), var(--rays);
+    background-size: 200%, 100%;
+    animation: god-rays 40s linear infinite;
+    background-attachment: fixed;
+    mix-blend-mode: difference;
+}
+@keyframes god-rays {
+    0% {
+        background-position: 0% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 200% 200%, 100% 100%;
+    }
+}
+    </style>
+
+<img style="margin-bottom: 1vw;" src="googlelogo_light_color_272x92dp.png">
+    <div class="search" id="search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="searchic" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="10" cy="10" r="7" />
+            <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+        <input placeholder="Search google..." id="searchq" autocomplete="off" class="searchi">
+        <a class="chc" onclick="ser();">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M5 12l5 5l10 -10" />
+            </svg>
+        </a>
+    </div>
+    
+    <script src="/public/js/theme.js"></script>
+    <script src="/public/js/new.js"></script>
+</body>
+
+</html>

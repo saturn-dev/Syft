@@ -1,0 +1,405 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="unblocked games, front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git" />
+    <meta name="author" content="Saturn" />
+    <meta content="Syft" property="og:title" />
+    <meta content="Best unblocked game site!" property="og:description" />
+    <meta name="theme-color" content="#858385">
+    <meta property="og:image" content="/icon.png">
+    <title>Syft | Games</title>
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <script defer src="/js/gamescroll.js"></script>
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/games.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+      <div id="notification-container"></div>
+    </head>
+      <div id="setting" class="setting-frame">
+        <center>
+          <div class="tabs">
+            <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+            <label for="tab1" class="tabs__label tab1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-cog"><path d="M2 21a8 8 0 0 1 10.434-7.62"/><circle cx="10" cy="8" r="5"/><circle cx="18" cy="18" r="3"/><path d="m19.5 14.3-.4.9"/><path d="m16.9 20.8-.4.9"/><path d="m21.7 19.5-.9-.4"/><path d="m15.2 16.9-.9-.4"/><path d="m21.7 16.5-.9.4"/><path d="m15.2 19.1-.9.4"/><path d="m19.5 21.7-.4-.9"/><path d="m16.9 15.2-.4-.9"/></svg>
+            </label>
+            <div class="tabs__content">
+              <div>
+                <h1 class="settingtitle">Main settings</h1>
+                <div class="divider"></div>
+                <h1 style="font-weight: 300; margin-top: 1vw;" class="maintitle">About:blank</h1>
+                <button class="btn1" onclick="abtBlank()">Open</button>       
+                <div class="divider"></div>
+                <h1 style="font-weight: 300; margin-top: 1vw;" class="maintitle">Grid Mode</h1>
+                <p class="maindescription">Once enabled, the gamepage will become more compact in a grid.</p>
+                <button class="btn1" onclick="abtBlank()">Toggle</button>       
+
+                <div class="divider"></div>
+                <h1 style="margin-top: 1vw;" class="maintitle">Collapsed Sidebar</h1>
+                <p class="maindescription">Once enabled, the sidebar will collapse into a sleek, more compact design.</p>
+                <button onclick="enableClickoffCloak()" id="enablecloak" class="btn1">Enable</button>
+                <button onclick="disableClickoffCloak()" id="disablecloak" class="btn1">Disable</button>
+
+              </div>
+            </div>
+            <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+            <label for="tab2" class="tabs__label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </label>
+            <div class="tabs__content">
+              <div>
+                <h1 class="settingtitle">Customization</h1>
+                <div class="divider"></div>
+                <h1 style="margin-top: 1vw;" class="maintitle">Themes</h1>
+
+                <div class="themes-container">
+                <div onclick="setTheme('syft')" class="theme" style="background-color: rgb(12, 14, 17); color: rgb(255, 255, 255); border: 1px solid #1a1e22;">
+                <div class="color" style="background: linear-gradient(135deg, #002A30, #004A56, #007789, #00B0CC);">
+                </div>Syft</div>
+                
+                <div onclick="setTheme('mint')" class="theme" style="background-color: #2e3047; color: #ffffff; border: 1px solid #212333;">
+                <div class="color" style="background: linear-gradient(135deg, #0E2F26, #16604D, #249978, #3BBA9C); border: 1px solid #212333;">
+                </div>Mint</div>
+                  
+                <div onclick="setTheme('gruvbox')" class="theme" style="background-color: #282828; color: #fbf1c7; border: 1px solid #3f3a37;">
+                <div class="color" style="background: linear-gradient(135deg, #2a2905, #52500e, #7b7814, #98971a); border: 1px solid #3f3a37;">
+                </div>Gruvbox</div>
+              
+                <div onclick="setTheme('stormal')" class="theme" style="background-color: #262b32; color: #ffffff; border: 1px solid #363c41;">
+                <div class="color" style="background: linear-gradient(135deg, #3d4248, #6a727b, #949da7, #b1bac4); border: 1px solid #363c41;">
+                </div>Stormal</div>
+                
+                <div onclick="setTheme('cyberpunk')" class="theme" style="background-color: #110320; color: #9c6eaa; border: 1px solid #5a0e72;">
+                <div class="color" style="background: linear-gradient(135deg, #420a53, #5a0e72, #9bbb32, #c6f040); border: 1px solid #5a0e72;">
+                </div>Cyberpunk</div>
+                
+                <div onclick="setTheme('void')" class="theme" style="background-color: #030007; color: #c0c0c0; border: 1px solid #1a131f;">
+                <div class="color" style="background: linear-gradient(135deg, #555555, #666666, #787878, #8a8a8a, #9b9b9b); border: 1px solid #1a131f;">
+                </div>Void</div>
+
+                <div onclick="setTheme('electric-wave')" class="theme" style="background-color: #0a0726; color: #ffffff; border: 1px solid #3d1a5c;">
+                <div class="color" style="background: linear-gradient(135deg, #150829, #1e0b3b, #3b0f74, #4b1493); border: 1px solid #3d1a5c;">
+                </div>Electric Wave</div>
+
+                <div onclick="setTheme('mocha')" class="theme" style="background-color: #1e1e2d; color: #ffffff; border: 1px solid #27273a;">
+                <div class="color" style="background: linear-gradient(135deg, #6f4fe2, #7d5ae6, #8a66ea, #a07be6, #c5a7f3); border: 1px solid #27273a;">
+                </div>Mocha</div>
+
+                <div onclick="setTheme('nebula')" class="theme" style="background-color: #181a1f; color: #ffffff; border: 1px solid #1a2333;">
+                <div class="color" style="background: linear-gradient(135deg, #2e2b47, #3a3a66, #5a4c83, #7f5a9e); border: 1px solid #1a2333;">
+                </div>Nebula</div>
+
+                <div onclick="setTheme('forest-mist')" class="theme" style="background-color: #263e36; color: #ffffff; border: 1px solid #2d5c4b;">
+                <div class="color" style="background: linear-gradient(135deg, #2a5547, #4e7758, #5e9e6c, #7dbf81); border: 1px solid #2d5c4b;">
+                </div>Forest Mist</div>
+                
+                <div onclick="setTheme('hacker')" class="theme" style="background-color: #000000; color: #ffffff; border: 1px solid #20C20E;">
+                <div class="color" style="background: linear-gradient(135deg, #1a9d0a, #22a311, #33b31b, #58c63e, #20C20E); border: 1px solid #20C20E;">
+                </div>Hacker</div>
+
+                <div onclick="setTheme('hazelnut')" class="theme" style="background-color: #55423d; color: #fff3ec; border: 1px solid #C69A6C;">
+                  <div class="color" style="background: linear-gradient(135deg, #D8C7B3, #A68A6A, #7F5C3C); border: 1px solid #C69A6C;">
+                  </div>Hazelnut</div>
+              </div>
+              <h1 style="margin-top: 1vw;" class="maintitle">Secret Themes</h1>
+              
+              <div class="special-themes-container">
+              
+                <div onclick="setTheme('glass-liquid-metal')" class="theme shine pulse" style="color: #ffffff; border: 1px solid #333333;">
+                  <video autoplay muted loop id="background-video-theme" class="video-background">
+                    <source src="/images/backgrounds/liquid-metal.mp4" type="video/mp4">
+                  </video>
+                  <div class="color" style="background: linear-gradient(135deg, #222222, #444444, #666666); border: 1px solid #333333;"></div>
+                  Glass Liquid Metal
+                </div>
+                <div onclick="setTheme('cosmic')" class="theme animated-border-box" style="color: #ffffff;">
+                  <img src="/images/backgrounds/dark.jpg" alt="Cosmic" class="background-image">
+                  <div class="color" style="background: linear-gradient(135deg, #8c3a5e, #111d44, #573170); border: 1px solid #422555;"></div>
+                  Cosmic
+                  <div class="animated-border-box-glow"></div>
+                </div>                
+                <div onclick="setTheme('hacker-290')" class="theme shine" style="color: #ffffff; border: 1px solid #499d45;">
+                  <video autoplay muted loop id="background-video-theme" class="video-background matrix">
+                    <source src="/images/backgrounds/matrix.mp4" type="video/mp4">
+                  </video>
+                  <div class="color" style="background: linear-gradient(135deg, #2d8531, #499d45, #499d45); border: 1px solid #499d45;"></div>
+                  Hacker 2.0
+                </div>
+                <div onclick="setTheme('discord')" class="theme" style="background-color: #313338; color: #ffffff; border: 1px solid #35363c;">
+                  <div class="color" style="background: linear-gradient(135deg, #1a237e, #303fbe, #4555e5, #5564ec); border: 1px solid #35363c;">
+                  </div>Discord</div>
+
+                <div onclick="setTheme('space')" class="theme animated-border-box neo" style="color: #ffffff;">
+                  <img src="/images/backgrounds/future-pixel.gif" alt="Liquid Metal" class="background-image">
+                  <div class="color" style="background: linear-gradient(135deg, #216a5f, #17a5f4, #17163a); border: 1px solid rgb(85, 48, 110);"></div>
+                  Neo Pixel
+                  <div class="animated-border-box-glow"></div>
+                </div>
+                <div onclick="setTheme('solar-flare')" class="theme solar" style="background-color: #2b1a1f; color: #f0e0a8; border: 1px solid #3a2321;">                     
+                <div class="color" style="background: linear-gradient(135deg, #2b1a18, #3a2321, #cc8f2c, #ffb135); border: 1px solid #3a2321;">
+                </div>Solar Flare</div>
+              </div>
+            </div>
+          </div>
+
+            <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
+            <label for="tab3" class="tabs__label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </label>
+            <div class="tabs__content">
+              <h1 class="settingtitle">Security</h1>
+              <div class="divider"></div>
+              <h1 style="margin-top: 20px;" class="maintitle">Preset tab cloak</h1>
+              <div class="cloak-buttons">
+                <button  class="cloakbutton" onclick="setCloak('canvas')">
+                  <img src="/images/cloak/canvas.png">
+                </button>
+                <button class="cloakbutton" onclick="setCloak('google-classroom')">
+                  <img src="/images/cloak/google-classroom.png">
+                </button>
+                <button class="cloakbutton" onclick="setCloak('google')">
+                  <img src="/images/cloak/google.png">
+                </button>
+                <button class="cloakbutton" onclick="setCloak('google-drive')">
+                  <img src="/images/cloak/googledrive.png">
+                </button>
+                <button class="cloakbutton" onclick="setCloak('nearpod')">
+                  <img src="/images/cloak/near-pod.png">
+                </button>
+              </div>
+              <h1 class="maintitle">Custom tab cloak</h1>
+              <input id="title" class="settinginput" placeholder="Title" onkeyup="setTitle(this.value)">
+              <input id="icon" class="settinginput" placeholder="Logo URL" onkeyup="setFavicon(this.value.trim())">
+            <div>
+              <button style="margin-top: 10px;" onclick="resetTab()" class="btn1">Reset cloak</button>
+            </div>
+   
+              <div class="divider"></div>
+              <h1 style="margin-top: 1vw;" class="maintitle">Click off cloaking</h1>
+              <p class="maindescription">When you click away from SYFT, the tab seamlessly disguises itself as <span style="color: var(--theme)">Google</span>.</p>
+              <button onclick="enableClickoffCloak()" id="enablecloak" class="btn1">Enable</button>
+              <button onclick="disableClickoffCloak()" id="disablecloak" class="btn1">Disable</button>
+              <div class="divider"></div>
+              <h1 style="margin-top: 1vw;" class="maintitle">Close protection</h1>
+              <p class="maindescription">Prevent extensions and teachers from closing tabs by displaying a <span style="color: var(--theme)">confirmation popup</span> whenever there is an attempt to close the page.</p>
+              <button onclick="enableCloseProtection()" id="enablecloak" class="btn1">Enable</button>
+              <button onclick="disableCloseProtection()" id="disablecloak" class="btn1">Disable</button>
+            </div>
+          </div>
+      </div>
+    </center>
+    </div>
+    </div>
+    <div id="loader">
+      <div class="loader-ring"></div>
+      <p id="random-message"></p>
+  </div>
+  
+
+   <!-- Sidebar --> 
+<div id="search-overlay" class="overlay" onclick="closeSearch()"></div> 
+<div class="sidebar">
+  <a href="/" class="sidebar-icon home-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span>Home</span>
+      </div>
+  </a>
+
+  <a href="/games" class="sidebar-icon games-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+          <span>Games</span>
+      </div>
+  </a>
+
+  <a onclick="openSearch()" class="sidebar-icon search-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span>Search</span>
+      </div>
+  </a>
+
+  <a href="/ai" class="sidebar-icon ai-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          <span>AI</span>
+      </div>
+  </a>
+
+  <a href="/leaderboard" class="sidebar-icon leaderboard-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-increasing"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+          <span>Leaderboard</span>
+      </div>
+  </a>
+
+  <a href="/extra" class="sidebar-icon extra-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          <span>Extra</span>
+      </div>
+  </a>
+
+  <a href="/profile" class="sidebar-icon profile-icon">
+      <div class="sidebar-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+          <span>Profile</span>
+      </div>
+  </a>
+
+  <div class="sidebar-container">
+    <div class="time" id="date">May 5</div>
+    <div class="topdivider"></div>
+    <div class="time" id="time2">10:00</div>
+      <div class="battery">
+          <i id="battery-icon" class="fas fa-battery-full"></i>
+      </div>
+  </div>
+
+  <a id="settings" class="sidebar-icon settings-icon">
+    <div class="sidebar-content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>          
+      <span>Settings</span>
+    </div>
+  </a>
+  
+</div>
+
+
+ 
+  
+
+
+
+    <div id="gameframe">
+      <div class="gameDisplay">
+        <div class="game">
+          <iframe id="game_iframe" allowfullscreen="" src="loader.html"></iframe>
+        </div>
+        <div class="options">
+          <div class="left">
+            <div class="gametext">
+              <img id="gameicon" src="/icon.png"/>
+              <div class="margin">
+                <div class="flex">
+                  <h1 id="gametitle">No game here</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="optionsbutton">
+            <a>
+              <button id="favorite" title="Favorite Game" class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </button>
+            </a>
+          </div>
+            <div class="line"></div>
+            <div class="optionsbutton">
+              <a>
+                <button id="dropdown-button" title="Game controls" class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-keyboard"><path d="M10 8h.01"/><path d="M12 12h.01"/><path d="M14 8h.01"/><path d="M16 12h.01"/><path d="M18 8h.01"/><path d="M6 8h.01"/><path d="M7 16h10"/><path d="M8 12h.01"/><rect width="20" height="16" x="2" y="4" rx="2"/></svg>
+                </button>
+              </a>
+              <div id="dropdown-menu" class="hidden">
+                <center>
+                  <h1 class="controlstitle">Controls</h1>
+                  <p id="gamecontrols"></p>
+               </center>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="optionsbutton">
+              <a id="reloadbtn">
+                <button title="Refresh game" class="icon" id="reloadButton">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+                </button>
+              </a>
+            </div>
+            <div class="line"></div>
+            <div class="optionsbutton">
+              <a>
+                <button class="icon" title="Fullscreen" id="fullscreenButton">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+
+
+
+
+
+ <script>
+
+    function showTime() {
+      let time = new Date();
+
+      let hour = time.getHours();
+      let min = time.getMinutes();
+
+      if (hour > 12) {
+        hour -= 12;
+      }
+      if (hour === 0) {
+        hour = 12;
+      }
+
+      hour = hour < 10 ? "0" + hour : hour;
+      min = min < 10 ? "0" + min : min;
+
+      document.getElementById("hours").textContent = hour;
+      document.getElementById("minutes").textContent = min;
+    }
+
+    function updateBatteryStatus() {
+      navigator.getBattery().then(battery => {
+        const batteryLevel = Math.floor(battery.level * 100);
+        const batteryIcon = document.getElementById("battery-icon");
+
+        batteryIcon.className = 'fas'; 
+
+        if (batteryLevel >= 75) {
+          batteryIcon.classList.add("fa-battery-full");
+        } else if (batteryLevel >= 50) {
+          batteryIcon.classList.add("fa-battery-three-quarters");
+        } else if (batteryLevel >= 25) {
+          batteryIcon.classList.add("fa-battery-half");
+        } else if (batteryLevel > 0) {
+          batteryIcon.classList.add("fa-battery-quarter");
+        } else {
+          batteryIcon.classList.add("fa-battery-empty");
+        }
+      });
+    }
+
+    showTime();
+    updateBatteryStatus();
+
+    setInterval(showTime, 1000);
+    setInterval(updateBatteryStatus, 60000);
+    
+    </script>
+
+      <button onclick="backtogame()" id="backtogame">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 20 20">
+          <path d="M4.16732 12.5L10.0007 6.66667L15.834 12.5" stroke="var(--theme)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-cursor-on-hover"></path>
+        </svg>
+      </button>
+      <script src="/js/loader.js"></script>
+      <script src="/js/backtotop.js"></script>
+      <script src="/js/favorite.js"></script>
+    </div>
+    <script src="/js/index.js"></script>
+  </body>

@@ -1,0 +1,146 @@
+<style>
+  :root{
+    --bg: #0f1724;
+    --card:#0b1220;
+    --muted:#98a0b3;
+    --accent:#6ee7b7;
+    --accent-2:#60a5fa;
+    --glass: rgba(255,255,255,0.03);
+    --glass-2: rgba(255,255,255,0.02);
+    --radius:16px;
+    --glass-border: rgba(255,255,255,0.04);
+    --glass-strong: rgba(255,255,255,0.06);
+    --card-glow: 0 8px 30px rgba(96,165,250,0.08);
+    color-scheme: dark;
+  }
+
+  body{
+    margin:0;
+    background:#0f1724;
+    font-family: sans-serif;
+    color:#e6eef6;
+  }
+
+  /* modal backdrop */
+  .modal-backdrop{
+    position:fixed;
+    inset:0;
+    display:flex; /* make it always visible */
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.8));
+    z-index:1200;
+    padding:32px;
+  }
+
+  /* modal */
+  .modal{
+    width:100%;
+    max-width:1200px;
+    background:var(--card);
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid var(--glass-border);
+    display:flex;
+    flex-direction:column;
+    max-height:90vh;
+  }
+
+  .modal .modal-head{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:12px 16px;
+    border-bottom:1px solid var(--glass-border);
+  }
+
+  .modal .modal-body{
+    padding:0;
+    flex:1;
+    display:grid;
+    grid-template-columns: 1fr 320px;
+    gap:12px;
+    min-height:420px;
+  }
+
+  .play-image{
+    width:100%;
+    height:100%;
+    border:0;
+    background:#000;
+    display:block;
+  }
+
+  .details{
+    padding:14px;
+    overflow:auto;
+    background:linear-gradient(180deg, transparent, rgba(255,255,255,0.01));
+  }
+
+  .close{
+    margin-left:auto;
+    background:transparent;
+    border:0;
+    color:var(--muted);
+    cursor:pointer;
+  }
+
+  .play-btn{
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
+    padding:8px 12px;border-radius:10px;border:0;color:#07212a;font-weight:700; cursor:pointer;
+    box-shadow: 0 8px 30px rgba(96,165,250,0.08);
+  }
+  
+    .ghost{ background:transparent;border:1px solid var(--glass-border); padding:8px 10px;border-radius:10px;color:var(--muted); cursor:pointer; }
+
+  /* small screens */
+  @media (max-width:900px){
+    .modal .modal-body{
+      grid-template-columns: 1fr;
+      min-height:60vh;
+    }
+  }
+</style>
+
+<div id="modalBack" class="modal-backdrop" role="dialog" aria-modal="true">
+  <div class="modal" role="document">
+    <div class="modal-head">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div id="modalThumb" style="width:68px;height:46px;border-radius:8px;background:#071026"></div>
+        <div>
+          <div id="modalTitle" style="font-weight:700">Game title</div>
+          <div id="modalSub" style="font-size:13px;color:var(--muted)">by Unknown • <span id="modalTags"></span></div>
+        </div>
+      </div>
+      <button class="close" id="closeModal" aria-label="Close">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <div style="background:#000; min-height:320px; display:flex; flex-direction:column;">
+        <img class="play-image" src="/images/game-images/thumbnails/1-on-1-soccer.png">
+      </div>
+
+      <aside class="details">
+        <h3 style="margin-top:0">About</h3>
+        <p id="modalDesc" style="color:var(--muted)">Game description will appear here.</p>
+
+        <div style="margin-top:10px">
+          <button id="playInModal"  class="play-btn" style="width:100%;display:block">Play</button>
+          <button id="openInNew" class="ghost" style="width:100%;margin-top:8px">Open in new tab</button>
+        </div>
+
+        <div style="margin-top:16px">
+          <strong>Controls</strong>
+          <div id="modalControls" style="color:var(--muted); margin-top:6px">Arrow keys, Z / X, Space, etc.</div>
+        </div>
+
+        <div style="margin-top:18px">
+          <strong>More like this</strong>
+          <div id="moreLike" style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+

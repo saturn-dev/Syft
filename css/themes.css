@@ -1,0 +1,381 @@
+body[theme="syft"] {
+  /* Background Colors */
+  --background: #090b0d;
+  --background2: #0c0e11;
+  --background3: #101317;
+  --background4: #0d0f12;
+  --hoverbackground: #161a1e;
+
+  /* Borders & Outlines */
+  --outline: #101114;
+  --border: #0096b3;
+
+  /* Primary Theme Colors */
+  --theme: #00b0cc;
+  --theme2: #008aa6;
+  --theme-grad: #00b0cc, #008aa6;
+  --theme-rgba: rgba(0, 176, 204, 0.2);
+
+  /* Text Colors */
+  --text: #e6e6e6;
+  --text2: #00b0cc;
+  --text3: #008aa6;
+  --text-secondary: #a8a8a8;
+
+  /* Navigation & Buttons */
+  --nav-btn: #c0c0c0;
+  --nav-btn-hover: #00b0cc; 
+
+  --ray-dark1: rgba(0, 176, 204, 0.8);  /* Dark cyan for the ray effect */
+  --ray-dark2: rgba(0, 140, 166, 0.15);  /* Lighter cyan for softer rays */
+  --ray-light1: rgba(0, 176, 204, 0.15); /* Light cyan for subtle glow */
+  --ray-light2: rgba(0, 140, 166, 0.15);  /* Slightly darker light cyan */
+  --ray-transparent: transparent;         /* Transparent for blending */
+}
+
+
+
+body[theme="macchiato"] {
+  --background: #0a0a0f;
+  --background2: #11111a;
+  --background3: #191927;
+  --background4: #1f1f2f;
+  --hoverbackground: #2a2a40;
+
+  --outline: #1c1c29;
+  --border: #9a6bff;
+
+  --theme: #cba6f7;
+  --theme2: #9a6bff;
+  --theme-grad: #cba6f7, #9a6bff;
+  --theme-rgba: rgba(203, 166, 247, 0.2);
+
+  --text: #e6e6e6;
+  --text2: #cba6f7;
+  --text3: #9a6bff;
+  --text-secondary: #aaa0cc;
+
+  --nav-btn: #d4c0ff;
+  --nav-btn-hover: #cba6f7;
+
+  --ray-dark1: rgba(203, 166, 247, 0.8);
+  --ray-dark2: rgba(154, 107, 255, 0.15);
+  --ray-light1: rgba(203, 166, 247, 0.15);
+  --ray-light2: rgba(154, 107, 255, 0.15);
+  --ray-transparent: transparent;
+}
+
+
+
+
+/* Mint Theme */
+body[theme="mint"] {
+  --background: #1a252c;
+  --background2: #2e3c48;
+  --background3: #3a4f5b;
+  --background4: #3a4f5b;
+  --hoverbackground: #2e3c48;
+  --outline: #1d2b37;
+  --theme: #3BBA9C;
+  --theme2: #2b8e76;
+  --theme-grad: #3BBA9C, #2b8e76;
+  --theme-rgba: rgba(59, 186, 156, 0.2);
+  --text: #e6e6e6;
+  --text2: #3BBA9C;
+  --text3: #2b8e76;
+  --text-secondary: #b1fcec;
+  --nav-btn: #b8b8b8;
+  --nav-btn-hover: #3BBA9C;
+}
+
+/* Stormal Theme */
+body[theme="stormal"] {
+  --background: #2c353e;
+  --background2: #3a4b55;
+  --background3: #4c5b66;
+  --background4: #4c5b66;
+  --hoverbackground: #3a4b55;
+  --outline: #2f3c46;
+  --theme: #b1bac4;
+  --theme2: #9aacc1;
+  --theme-grad: #b1bac4, #9aacc1;
+  --theme-rgba: rgba(177, 186, 196, 0.2);
+  --text: #ffffff;
+  --text2: #b1bac4;
+  --text3: #9aacc1;
+  --text-secondary: #ffffff;
+  --nav-btn: #b8b8b8;
+  --nav-btn-hover: #b1bac4;
+}
+
+/* Discord Theme */
+body[theme="discord"] {
+  --background: #1e1f22;
+  --background2: #313338;
+  --background3: #2b2d31;
+  --background4: #2b2d31;
+  --hoverbackground: #404248;
+  --outline: #35363c;
+  --theme: #5564ec;
+  --theme-rgba: rgba(85, 100, 236, 0.2);
+  --theme2: #414cb3;
+  --border: #5564ec;
+  --theme-grad: #5564ec, #5564ec;
+  --text2: #5564ec;
+  --text3: #5564ec;
+  --text: #fff;
+  --text-secondary: #fff;
+  --nav-btn: #b8b8b8;
+}
+
+/* Gruvbox Theme */
+body[theme="gruvbox"] {
+  --background: #3e3e3e;
+  --background2: #565151;
+  --background3: #7e6f5f;
+  --background4: #7e6f5f;
+  --hoverbackground: #73664d;
+  --outline: #4f4b42;
+  --theme: #98971a;
+  --theme2: #7f7b10;
+  --theme-grad: #98971a, #7f7b10;
+  --theme-rgba: rgba(152, 151, 26, 0.2);
+  --text: #fbf1c7;
+  --text2: #98971a;
+  --text3: #7f7b10;
+  --text-secondary: #fbf1c7;
+  --nav-btn: #665c54;
+  --nav-btn-hover: #98971a;
+  --ray-dark1: rgba(80, 70, 60, 0.8);
+  --ray-dark2: rgba(110, 110, 50, 0.15);
+  --ray-light1: rgba(152, 151, 26, 0.15);
+  --ray-light2: rgba(127, 123, 16, 0.15);
+  --ray-transparent: transparent;
+}
+
+/* Hacker Theme */
+body[theme="hacker"] {
+  --background: #131313;
+  --background2: #171717;
+  --background3: #1d1d1d;
+  --background4: #1d1d1d;
+  --hoverbackground: #20C20E;
+  --outline: #20C20E;
+  --theme: #20C20E;
+  --theme2: #20C20E;
+  --theme-grad: #20C20E, #20C20E;
+  --theme-rgba: rgba(32, 194, 14, 0.2);
+  --text: #ffffff;
+  --text2: #20C20E;
+  --text3: #20C20E;
+  --text-secondary: #ffffff;
+  --nav-btn: #20C20E;
+  --nav-btn-hover: #20C20E;
+}
+
+/* Light Theme */
+body[theme="hazelnut"] {
+  --background: #624d47;      
+  --background2: #55423d;      
+  --background3: #866960;     
+  --background4: #C69A6C;      
+  --hoverbackground: #C69A6C;  
+  --outline: #A68A6A;           
+  --theme: #A68A6A;             
+  --theme2: #A68A6A;      
+  --theme-grad: #A68A6A, #A68A6A;
+  --theme-rgba: rgba(255, 192, 173, 0.2); 
+  --text: #fff3ec;     
+  --text2: #7F5C3C; 
+  --text3: #A68A6A;
+  --text-secondary: #D8C7B3;
+  --nav-btn: #C69A6C;
+  --nav-btn-hover: #8A6D48;
+}
+
+
+/* Void Theme */
+body[theme="void"] {
+  --background: #090909;
+  --background2: #0c0c0c;
+  --background3: #1a1a1a;
+  --background4: #1a1a1a;
+  --hoverbackground: #0f1011;
+  --outline: #1a1a1a;
+  --theme: #9b9b9b;
+  --theme2: #b3b3b3;
+  --theme-grad: #1a1a1a98, #1a1a1a93;
+  --theme-rgba: rgba(155, 155, 155, 0.2);
+  --text: #c0c0c0;
+  --text2: #b3b3b3;
+  --text3: #a09f9f;
+  --text-secondary: #ffffff;
+  --nav-btn: #b8b8b8;
+  --nav-btn-hover: #9b9b9b;
+}
+
+body[theme="mocha"] {
+  --background: #24273a;      /* surface0 */
+  --background2: #1e2030;     /* base */
+  --background3: #1e2030;     /* base */
+  --background4: #181926;     /* mantle */
+  --hoverbackground: #1e2030; /* base */
+  --outline: #363a4f;         /* surface1 */
+  --theme: #a6e3a1;           /* mauve */
+  --theme2: #84b37f;          /* slightly darker mauve */
+  --theme-grad: #a6e3a1, #84b37f;
+  --theme-rgba: rgba(166, 227, 161, 0.2);
+  --text: #ffffff;            /* text */
+  --text2: #a6e3a1;           /* mauve */
+  --text3: #84b37f;           /* darker mauve */
+  --text-secondary: #e0e0e0;  /* subtext0 */
+  --nav-btn: #939ab7;         /* overlay1 */
+  --nav-btn-hover: #cba6f7;   /* mauve */
+
+  --ray-dark1: rgba(180, 146, 221, 0.8);  /* Dark cyan for the ray effect */
+  --ray-dark2: rgba(152, 115, 197, 0.15);  /* Lighter cyan for softer rays */
+  --ray-light1: rgba(36, 39, 58, 0.15); /* Light cyan for subtle glow */
+  --ray-light2: rgba(203, 166, 247, 0.15);  /* Slightly darker light cyan */
+  --ray-transparent: transparent;         /* Transparent for blending */
+}
+
+/* Nebula Theme */
+body[theme="nebula"] {
+  --background: #0f1422;
+  --background2: #1a2333;
+  --background3: #2a3a4a;
+  --background4: #3a4e5a;
+  --hoverbackground: #3a4f6a;
+  --outline: #2f3c47;
+  --theme: #7f5a9e;
+  --theme2: #9f7bcd;
+  --theme-grad: #7f5a9e, #9f7bcd;
+  --theme-rgba: rgba(127, 90, 158, 0.2);
+  --text: #ffffff;
+  --text2: #9f7bcd;
+  --text3: #d0a5d3;
+  --text-secondary: #b6b6b6;
+  --nav-btn: #a29c9c;
+  --nav-btn-hover: #7f5a9e;
+}
+
+/* Solar Flare Theme */
+body[theme="solar-flare"] {
+  --background: #2b1a1f;
+  --background2: #3a2321;
+  --background3: #4c3032;
+  --background4: #5a403f;
+  --hoverbackground: #f27e37;
+  --outline: #4c2c2a;
+  --theme: #ffb135;
+  --theme2: #f27e37;
+  --theme-grad: #f27e37, #ffb135;
+  --theme-rgba: rgba(255, 177, 53, 0.2);
+  --text: #f0e0a8;
+  --text2: #ffb135;
+  --text3: #f27e37;
+  --text-secondary: #f0e0a8;
+  --nav-btn: #ff5e00;
+  --nav-btn-hover: #ffb135;
+}
+  
+body[theme="cyberpunk"] {
+  --background: #1d0635; /* Deep purple for sidebar and gameframe */
+  --background2: #110320; /* Very dark purple for the overall background */
+  --background3: #3b0a4a; /* Rich purple for subtle contrasts and depth */
+  --background4: #5a0e72; /* Dark magenta/purple for added layers */
+  --hoverbackground: #be52aa; /* Neon magenta hover effect, bright and eye-catching */
+  --outline: #5a0e72; /* Neon yellow-green outline to give a futuristic pop */
+  --theme: #c6f040; /* Vibrant neon pink for the primary theme */
+  --theme2: #be52aa; /* Deep neon magenta for secondary theme */
+  --border: #c6f040; /* Neon green borders to match the outline */
+  --theme-grad: #ff56e6, #be52aa; /* Gradient from neon pink to magenta */
+  --theme-rgba: rgba(255, 86, 230, 0.2);
+  --text: #9c6eaa; /* Light, readable text to stand out on dark backgrounds */
+  --text2: #ff56e6; /* Neon pink text for emphasis */
+  --text3: #c6f040; /* Neon green for secondary text, great contrast */
+  --text-secondary: #c6f040; /* Light gray for secondary text */
+  --nav-btn: #c6f040; /* Navigation buttons in neon green */
+}
+
+
+
+  
+body[theme="forest-mist"] {
+  --background: #263e36; /* Deep forest green for sidebar and gameframe */
+  --background2: #1b4730; /* Dark, rich green that fits the forest vibe better */
+  --background3: #3d5a48; /* A deeper forest green for visual depth */
+  --background4: #4e7758; /* Slightly lighter but still earthy green */
+  --hoverbackground: #5e9e6c; /* Fresh, bright green for hover effects */
+  --outline: #2d5c4b; /* Subtle green outline to match background3 */
+  --theme: #7dbf81; /* Soft, natural green for the theme */
+  --theme2: #5e9e6c; /* A deeper green for variation */
+  --border: #7dbf81; /* Matching border with theme */
+  --theme-grad: #7dbf81, #5e9e6c; /* Gradient from soft green to dark green */
+  --theme-rgba: rgba(125, 191, 129, 0.2);
+  --text: #ffffff; /* White text for readability */
+  --text2: #7dbf81; /* Soft green text for emphasis */
+  --text3: #5e9e6c; /* A deeper green for secondary text */
+  --text-secondary: #c1d9c3; /* Light muted green for secondary text */
+  --nav-btn: #4e7758; /* Navigation buttons in a more natural green */
+}
+
+body[theme="electric-wave"] {
+  --background: #0a0726;
+  --background2: #1e0b3b;
+  --background3: #3d1a5c;
+  --background4: #5b2a91;
+  --hoverbackground: #9b44cd;
+  --outline: #3d1a5c;
+  --theme: #4b1493;
+  --theme2: #5b2a91;
+  --border: #9b44cd;
+  --theme-grad: #4b1493, #5b2a91;
+  --theme-rgba: rgba(75, 20, 147, 0.2);
+  --text: #ffffff;
+  --text2: #9b44cd;
+  --text3: #e93fda;
+  --text-secondary: #dcd6e0;
+  --nav-btn: #9b44cd;
+}
+
+body[theme="glass-liquid-metal"] {
+  --background-video-display: block;
+  --background: rgba(0, 0, 0, 0.5);
+  --background2: #0c0c0c;
+  --background3: #0c0c0c;
+  --background4: #0c0c0c;
+  --outline: #2b2b2b;
+  backdrop-filter: blur(13px);
+  --theme: #919191;
+  --theme-rgba: rgba(145, 145, 145, 0.2);
+  --theme-grad: #2b2b2b, #1d1d1d;
+  --text: #ffffff;
+  --text-secondary: #c5c5c5;
+}
+body[theme="hacker-290"] {
+  --background-video-display: block;
+  --background: rgba(0, 0, 0, 0.5);
+  --background2: #0c0c0c;
+  --background3: #0c0c0c;
+  --background4: #0c0c0c;
+  --outline: #499d45;
+  backdrop-filter: blur(13px);
+  --theme: #499d45;
+  --theme-rgba: rgba(73, 157, 69, 0.2);
+  --theme-grad: #499d45, #3d803a;
+  --text: #499d45;
+  --text-secondary: #d6d6d6;
+}
+body[theme="cosmic"] {
+  --background: rgba(0, 0, 0, 0.5);
+  --background2: #0c0c0c;
+  --background3: #0c0c0c;
+  --background4: #0c0c0c;
+  --outline: #181818;
+  --theme: #681e58;
+  --theme-rgba: rgba(145, 145, 145, 0.2);
+  --theme-grad: #681e58, #172554;
+  --text: #ffffff;
+  --text-secondary: #c5c5c5;
+}

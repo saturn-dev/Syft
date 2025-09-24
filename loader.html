@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loader</title>
+  <style>
+    @import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
+    @import url('css/themes.css');
+    :root {
+/* Background Colors */
+--background: #090b0d; /* Deep black-blue for a modern feel */
+--background2: #0c0e11; /* Softened for better depth */
+--background3: #101317; /* Subtle contrast for layering */
+--background4: #0d0f12; /* Kept for consistency */
+--hoverbackground: #161a1e; /* Improved hover contrast */
+
+/* Borders & Outlines */
+--outline: #1a1e22; /* Dark grey-blue for subtle depth */
+--border: #0096b3; /* Darkened cyan for a sleek look */
+
+/* Primary Theme Colors */
+--theme: #00b0cc; /* Darker neon cyan (balanced glow) */
+--theme2: #008aa6; /* Even darker complement for smooth contrast */
+--theme-grad: #00b0cc, #008aa6; /* Smooth cyber gradient */
+
+/* Text Colors */
+--text: #e6e6e6; /* Slightly off-white for softer contrast */
+--text2: #00b0cc; /* Primary accent */
+--text3: #008aa6; /* Secondary accent */
+--text-secondary: #a8a8a8; /* Darker grey for reduced strain */
+
+/* Navigation & Buttons */
+--nav-btn: #c0c0c0; /* Slightly muted for balance */
+--nav-btn-hover: #00b0cc; /* Cyan hover effect */
+
+}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      background-color: black;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+    }
+
+    .background-blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+      background: url('/images/game-images/thumbnails/retro-bowl.png') center center / cover no-repeat;
+      filter: blur(12px);
+      z-index: 0;
+      opacity: 0.5;
+      animation: zoomIn 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+
+    .card-container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      animation: fadeInUp 1s ease-out;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .game-image {
+      width: 200px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .game-image:hover {
+      transform: scale(1.05);
+    }
+
+    .game-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .play-button {
+      background: var(--theme);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: background 0.3s ease, transform 0.3s ease;
+      animation: bounceIn 1.2s ease forwards;
+      animation-delay: 0.5s;
+      cursor: pointer;
+      opacity: 0;
+      display: inline-block;
+        display: inline-flex;
+  align-items: center;
+  justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .play-button:hover {
+      background: var(--theme2);
+      transform: scale(1.05);
+    }
+
+    .arrow { margin-left: 8px; }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      width: 100%;
+      height: 100%;
+      display: none;
+      z-index: 2;
+    }
+
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      color: white;
+    }
+
+    .loading-img {
+      width: 100px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+
+    }
+
+    .progress-container {
+      width: 60%;
+      height: 10px;
+      background: var(--background3);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--theme);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .play-button svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+  </style>
+</head>
+<body>
+  <div class="background-blur"></div>
+
+  <div class="card-container" id="menu">
+    <img src="/images/game-images/thumbnails/retro-bowl.png" alt="Stone Grass Game" class="game-image" />
+    <h1 class="game-title">Retro Bowl</h1>
+    <div class="play-button" onclick="loadGame()">
+      Play Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play-icon lucide-circle-play"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loader">
+    <img class="loading-img" src="/images/game-images/thumbnails/retro-bowl.png" />
+    <h2>Retro Bowl</h2>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="progress-text" id="progressText">Loading... 0%</div>
+  </div>
+
+  <!-- Game iframe -->
+  <iframe id="gameFrame" src=""></iframe>
+
+  <script>
+function loadGame() {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("loader").style.display = "flex";
+
+  const iframe = document.getElementById("gameFrame");
+  const progressBar = document.getElementById("progressBar");
+  const progressText = document.getElementById("progressText");
+
+  let percent = 0;
+  const fakeLoader = setInterval(() => {
+    percent += Math.random() * 10;
+    if (percent >= 100) percent = 100;
+    progressBar.style.width = percent + "%";
+    progressText.textContent = "Loading... " + Math.floor(percent) + "%";
+  }, 300);
+
+  // Set the iframe source to start loading
+  iframe.src = "https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default_default";
+
+  // Simulated total loading time (optional)
+  setTimeout(() => {
+    clearInterval(fakeLoader);
+    progressBar.style.width = "100%";
+    progressText.textContent = "Loading complete!";
+
+    // Only 100ms wait before showing game
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+      iframe.style.display = "block";
+    }, 1300); // <-- 0.1 second delay
+  }, 5000); // Total simulated load duration
+}
+
+  </script>
+      <script src="/js/index.js"></script>
+</body>
+</html>
